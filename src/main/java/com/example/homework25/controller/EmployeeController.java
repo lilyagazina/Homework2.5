@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/employee")
 public class EmployeeController {
@@ -17,11 +19,6 @@ public class EmployeeController {
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
-
-   // @GetMapping
-    //public String employee() {
-     //   return "<b>employee</b>";
-   // }
 
     @GetMapping(path = "/add")
     public Employee addEmployee(@RequestParam String firstName,
@@ -39,7 +36,10 @@ public class EmployeeController {
     public Employee findEmployee(@RequestParam String firstName,
                                @RequestParam String lastName) {
         return employeeService.findEmployee(firstName,lastName);
-
+    }
+    @GetMapping (path = "/")
+public List<Employee> list(){
+return employeeService.list();
     }
 }
 
