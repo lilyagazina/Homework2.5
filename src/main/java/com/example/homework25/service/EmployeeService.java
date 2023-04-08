@@ -1,6 +1,6 @@
 package com.example.homework25.service;
 
-import com.example.homework25.Employee;
+import com.example.homework25.model.Employee;
 import com.example.homework25.exeption.EmployeeAlreadyAddedException;
 import com.example.homework25.exeption.EmployeeNotFoundException;
 import com.example.homework25.exeption.EmployeeStorageIsFullException;
