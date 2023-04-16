@@ -1,4 +1,4 @@
-package com.example.homework25;
+package com.example.homework25.model;
 
 import java.util.Objects;
 

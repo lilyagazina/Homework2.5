@@ -1,6 +1,6 @@
 package com.example.homework25.service;
 
-import com.example.homework25.Employee;
+import com.example.homework25.model.Employee;
 import com.example.homework25.exeption.EmployeeAlreadyAddedException;
 import com.example.homework25.exeption.EmployeeNotFoundException;
 import com.example.homework25.exeption.EmployeeStorageIsFullException;
@@ -46,7 +46,7 @@ public class EmployeeService {
 
 
     @GetMapping
-    public Employee removeEmployee(String firstName, String lastName) {
+    public Employee   removeEmployee(String firstName, String lastName) {
         // Удалить сотрудника.
         Employee employee = new Employee(firstName, lastName);
         for (int i = 0; i < employees.size(); i++) {
@@ -60,7 +60,7 @@ public class EmployeeService {
     }
 
     @GetMapping
-    public Employee findEmployee (String firstName, String lastName) {
+    public Employee   findEmployee (String firstName, String lastName) {
         //Найти сотрудника.
         Employee employee = new Employee(firstName, lastName);
         for (int i = 0; i < employees.size(); i++) {
